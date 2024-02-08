@@ -1,0 +1,18 @@
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, GithubAuthProvider, EmailAuthProvider } from 'firebase/auth'
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCHFPF9SCd48Ha93lvgXGrJaTxvAQF1-_E",
+    authDomain: "final-mct.firebaseapp.com",
+    projectId: "final-mct",
+    storageBucket: "final-mct.appspot.com",
+    messagingSenderId: "218432119212",
+    appId: "1:218432119212:web:fe17e6308db984ddc69a09"
+};
+
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider(app);
+export const githubProvider = new GithubAuthProvider(app);
+export const emailProvider = new EmailAuthProvider(app)
